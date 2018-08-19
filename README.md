@@ -2,7 +2,7 @@
 
 Behat 3 extension for generating AWESOME reports from your test results.
 
-[![Latest Stable Version](https://poser.pugx.org/elkan/behatformatter/v/stable)](https://packagist.org/packages/elkan/behatformatter) [![Total Downloads](https://poser.pugx.org/elkan/behatformatter/downloads)](https://packagist.org/packages/elkan/behatformatter) [![Latest Unstable Version](https://poser.pugx.org/elkan/behatformatter/v/unstable)](https://packagist.org/packages/elkan/behatformatter) [![License](https://poser.pugx.org/elkan/behatformatter/license)](https://packagist.org/packages/elkan/behatformatter)
+[![Latest Stable Version](https://poser.pugx.org/khalidumarr/behatformatter/v/stable)](https://packagist.org/khalidumarr/elkan/behatformatter) [![Total Downloads](https://poser.pugx.org/khalidumarr/behatformatter/downloads)](https://packagist.org/packages/khalidumarr/behatformatter) [![Latest Unstable Version](https://poser.pugx.org/khalidumarr/behatformatter/v/unstable)](https://packagist.org/packages/khalidumarr/behatformatter) [![License](https://poser.pugx.org/khalidumarr/behatformatter/license)](https://packagist.org/packages/khalidumarr/behatformatter)
 
 ### Twig report
 
