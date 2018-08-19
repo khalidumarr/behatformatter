@@ -1,11 +1,11 @@
 {
-    "name": "elkan/behatformatter",
-    "description": "This will create a formatter for Behat 3! Fast, Easy and Pretty!",
+    "name": "khalidumar/behatformatter",
+    "description": "This will create a formatter for Behat 3! Fast, Easy and Pretty! & Added support for php 7.2+",
     "license": "MIT",
     "authors": [
         {
-            "name": "Elkan Roelen",
-            "email": "roelen@elkan.nl"
+            "name": "Khalid Umar",
+            "email": "khalidumar03@gmail.com"
         }
     ],
     "minimum-stability": "dev",
@@ -23,7 +23,7 @@
     },
     "autoload": {
         "psr-4": {
-            "elkan\\BehatFormatter\\": "src/"
+            "khalidumarr\\BehatFormatter\\": "src/"
         }
     }
 }
