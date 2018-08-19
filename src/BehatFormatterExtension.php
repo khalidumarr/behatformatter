@@ -1,6 +1,6 @@
 <?php
 
-namespace elkan\BehatFormatter;
+namespace khalidumarr\BehatFormatter;
 
 use Behat\Testwork\ServiceContainer\Extension as ExtensionInterface;
 use Behat\Testwork\ServiceContainer\ExtensionManager;
@@ -29,7 +29,7 @@ class BehatFormatterExtension implements ExtensionInterface {
    * @return string
    */
   public function getConfigKey() {
-    return "elkanhtml";
+    return "khalidumarrhtml";
   }
 
   /**
@@ -51,8 +51,8 @@ class BehatFormatterExtension implements ExtensionInterface {
    * @param ArrayNodeDefinition $builder
    */
   public function configure(ArrayNodeDefinition $builder) {
-    $builder->children()->scalarNode("name")->defaultValue("elkanhtml");
-    $builder->children()->scalarNode("projectName")->defaultValue("Elkan's BehatFormatter");
+    $builder->children()->scalarNode("name")->defaultValue("khalidumarrhtml");
+    $builder->children()->scalarNode("projectName")->defaultValue("khalidumarr's BehatFormatter");
     $builder->children()->scalarNode("projectImage")->defaultValue(null);
     $builder->children()->scalarNode("projectDescription")->defaultValue(null);
     $builder->children()->scalarNode("renderer")->defaultValue("Twig");
@@ -71,7 +71,7 @@ class BehatFormatterExtension implements ExtensionInterface {
    * @param array $config
    */
   public function load(ContainerBuilder $container, array $config) {
-    $definition = new Definition("elkan\\BehatFormatter\\Formatter\\BehatFormatter");
+    $definition = new Definition("khalidumarr\\BehatFormatter\\Formatter\\BehatFormatter");
     $definition->addArgument($config['name']);
     $definition->addArgument($config['projectName']);
     $definition->addArgument($config['projectImage']);

@@ -6,7 +6,7 @@
  * Time: 14:39
  */
 
-namespace elkan\BehatFormatter\Classes;
+namespace khalidumarr\BehatFormatter\Classes;
 
 
 class Feature

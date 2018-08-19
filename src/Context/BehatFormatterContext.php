@@ -1,5 +1,5 @@
 <?php
-namespace elkan\BehatFormatter\Context;
+namespace khalidumarr\BehatFormatter\Context;
 
 use Behat\Behat\Context\SnippetAcceptingContext;
 use Behat\Gherkin\Node\PyStringNode;
@@ -14,7 +14,7 @@ use Behat\MinkExtension\Context\MinkContext;
 /**
  * Class BehatFormatterContext
  *
- * @package elkan\BehatFormatter\Context
+ * @package khalidumarr\BehatFormatter\Context
  */
 class BehatFormatterContext extends MinkContext implements SnippetAcceptingContext
     {
@@ -30,7 +30,7 @@ class BehatFormatterContext extends MinkContext implements SnippetAcceptingConte
      * @param BeforeFeatureScope $scope
      *
      */
-    public static function setUpScreenshotSuiteEnvironment4ElkanBehatFormatter(BeforeFeatureScope $scope)
+    public static function setUpScreenshotSuiteEnvironment4khalidumarrBehatFormatter(BeforeFeatureScope $scope)
     {
         self::$currentSuite = $scope->getSuite()->getName();
     }
@@ -38,7 +38,7 @@ class BehatFormatterContext extends MinkContext implements SnippetAcceptingConte
     /**
      * @BeforeScenario
      */
-    public function setUpScreenshotScenarioEnvironmentElkanBehatFormatter(BeforeScenarioScope $scope)
+    public function setUpScreenshotScenarioEnvironmentkhalidumarrBehatFormatter(BeforeScenarioScope $scope)
     {
         $this->currentScenario = $scope->getScenario();
     }

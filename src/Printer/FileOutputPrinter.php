@@ -4,7 +4,7 @@
  * @author David Raison <david@tentwentyfour.lu>
  */
 
-namespace elkan\BehatFormatter\Printer;
+namespace khalidumarr\BehatFormatter\Printer;
 
 use Behat\Testwork\Output\Exception\BadOutputPathException;
 use Behat\Testwork\Output\Printer\OutputPrinter as PrinterInterface;

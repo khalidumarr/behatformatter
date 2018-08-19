@@ -1,6 +1,6 @@
 <?php
 
-namespace elkan\BehatFormatter\Formatter;
+namespace khalidumarr\BehatFormatter\Formatter;
 
 use Behat\Behat\EventDispatcher\Event\AfterFeatureTested;
 use Behat\Behat\EventDispatcher\Event\AfterOutlineTested;
@@ -19,14 +19,14 @@ use Behat\Testwork\EventDispatcher\Event\BeforeSuiteTested;
 use Behat\Testwork\Output\Exception\BadOutputPathException;
 use Behat\Testwork\Output\Formatter;
 use Behat\Testwork\Output\Printer\OutputPrinter;
-use elkan\BehatFormatter\Classes\Feature;
-use elkan\BehatFormatter\Classes\Scenario;
-use elkan\BehatFormatter\Classes\Step;
-use elkan\BehatFormatter\Classes\Suite;
-use elkan\BehatFormatter\Printer\FileOutputPrinter;
-use elkan\BehatFormatter\Renderer\BaseRenderer;
+use khalidumarr\BehatFormatter\Classes\Feature;
+use khalidumarr\BehatFormatter\Classes\Scenario;
+use khalidumarr\BehatFormatter\Classes\Step;
+use khalidumarr\BehatFormatter\Classes\Suite;
+use khalidumarr\BehatFormatter\Printer\FileOutputPrinter;
+use khalidumarr\BehatFormatter\Renderer\BaseRenderer;
 use Behat\Behat\Hook\Scope\AfterStepScope;
-use elkan\BehatFormatter\Context;
+use khalidumarr\BehatFormatter\Context;
 
 
 /**
@@ -331,7 +331,7 @@ class BehatFormatter implements Formatter {
      */
     public function getDescription()
     {
-        return "Elkan's behat Formatter";
+        return "khalidumarr's behat Formatter";
     }
 
     /**

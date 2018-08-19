@@ -6,7 +6,7 @@
  * Time: 10:45
  */
 
-namespace elkan\BehatFormatter\Renderer;
+namespace khalidumarr\BehatFormatter\Renderer;
 
 interface RendererInterface {
 

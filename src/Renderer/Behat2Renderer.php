@@ -4,7 +4,7 @@
  * @author DaSayan <glennwall@free.fr>
  */
 
-namespace elkan\BehatFormatter\Renderer;
+namespace khalidumarr\BehatFormatter\Renderer;
 
 class Behat2Renderer implements RendererInterface {
 

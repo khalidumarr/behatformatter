@@ -6,7 +6,7 @@
  * Time: 12:50
  */
 
-namespace elkan\BehatFormatter\Classes;
+namespace khalidumarr\BehatFormatter\Classes;
 
 
 class Suite
