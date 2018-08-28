@@ -405,6 +405,7 @@ class Behat2Renderer implements RendererInterface {
                 }
                 #behat .feature {
                     margin:15px;
+                    margin-top: 84px;
                 }
                 #behat h2, #behat h3, #behat h4 {
                     margin:0px 0px 5px 0px;
@@ -577,7 +578,7 @@ class Behat2Renderer implements RendererInterface {
                 }
                 #behat .summary {
                     position: absolute;
-                    top: 0px;
+                    top: 45px;
                     left: 0px;
                     width:100%;
                     font-family: Arial, sans-serif;
