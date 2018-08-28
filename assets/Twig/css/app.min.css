@@ -52,6 +52,7 @@ p {
 }
 #top-nav.fixed {
     position: fixed;
+    top: 0px;
     left: 0;
     right: 0;
     z-index: 1000;
@@ -6913,4 +6914,9 @@ rotateX(-10deg);
     50% {
     color: #fff;
 }
+}
+
+.feature
+{
+    padding: 30px;    
 }

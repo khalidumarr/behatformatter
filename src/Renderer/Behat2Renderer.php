@@ -311,6 +311,7 @@ class Behat2Renderer implements RendererInterface {
         $suite = $obj->getCurrentSuite();
         $feature = $obj->getCurrentFeature();
         $scenario = $obj->getCurrentScenario();
+        $outputDir = $obj->getOutputPrinter()->getOutputPath();
 
         $steps = $scenario->getSteps();
         $step = end($steps); //needed because of strict standards
@@ -344,8 +345,8 @@ class Behat2Renderer implements RendererInterface {
                         </div>';
         $exception = $step->getException();
         if(!empty($exception)) {
-            $relativeScreenshotPath = 'assets/screenshots/'. $suite->getName() .'/' . $feature->getScreenshotFolder() . '/' . $scenario->getScreenshotName();
-            $fullScreenshotPath = $obj->getBasePath() . '/results/html/' . $relativeScreenshotPath;
+            $relativeScreenshotPath = 'screenshots/' . $feature->getScreenshotFolder() . '/' . $scenario->getScreenshotName();
+            $fullScreenshotPath = $outputDir . '/' . $relativeScreenshotPath;
             $print .= '
                         <pre class="backtrace">'.$step->getException().'</pre>';
             if(file_exists($fullScreenshotPath))
