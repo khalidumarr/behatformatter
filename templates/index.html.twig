@@ -284,7 +284,8 @@
                                                      {% for step in scenario.steps %}
                                                     <li class="dd-item step" data-id="step-{{ feature.id }}-{{ scenario.id }}-{{ step.id }}">
                                                         <div class="dd-nodrag dd-{% if step.isPassed %}success{% elseif step.isSkipped %}undefined{% elseif step.isPending %}undefined{% else %}failed{% endif %}">
-                                                            <b>{{ step.keyword }}</b> {{ step.text }}
+                                                            <span class="text"><b>{{ step.keyword }}</b> {{ step.text }}</span>
+                                                            <span class="path pull-right">{{ step.getPath }}</span>
                                                         </div>
                                                          {% if (printStepArgs is not null and (step.exception is not null or step.output is not null or step.arguments|length > 0)) or step.screenshot %}
                                                          <ol class="dd-list">

@@ -212,4 +212,9 @@ class Step
     {
         return $this->resultCode == StepResult::FAILED;
     }
+
+    public function getPath()
+    {
+        return $this->getDefinition()->getPath();
+    }
 }
