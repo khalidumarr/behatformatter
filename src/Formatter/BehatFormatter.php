@@ -620,7 +620,7 @@ class BehatFormatter implements Formatter {
         $scenario->setName($event->getScenario()->getTitle());
         $scenario->setTags($event->getScenario()->getTags());
         $scenario->setLine($event->getScenario()->getLine());
-        $scenario->setScreenshotName($event->getScenario()->getTitle());
+        $scenario->setScreenshotName(preg_replace('/[^a-z]/i','',$event->getScenario()->getTitle()));
         $this->currentScenario = $scenario;
 
         $print = $this->renderer->renderBeforeScenario($this);
