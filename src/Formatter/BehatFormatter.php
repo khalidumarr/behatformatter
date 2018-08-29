@@ -588,7 +588,7 @@ class BehatFormatter implements Formatter {
         $feature->setDescription($event->getFeature()->getDescription());
         $feature->setTags($event->getFeature()->getTags());
         $feature->setFile($event->getFeature()->getFile());
-        $feature->setScreenshotFolder($event->getSuite()->getName().'/'.$event->getFeature()->getTitle());
+        $feature->setScreenshotFolder(strtolower(preg_replace('/[^a-z]/i','',$event->getSuite()->getName()).'/'.preg_replace('/[^a-z]/i','',$event->getFeature()->getTitle())));
         $this->currentFeature = $feature;
 
         $print = $this->renderer->renderBeforeFeature($this);
@@ -744,17 +744,17 @@ class BehatFormatter implements Formatter {
                     }
                 }
             }
-        }
-        if(($step->getResultCode() == "99") || ($step->getResult()->isPassed() && $step->getKeyword() === "Then")){
-            $scenarioLine = empty($this->currentExampleLines) ? $this->currentScenario->getLine() : $this->currentExampleLines[$this->currentExampleCount++];
-            $screenshot = $event->getSuite()->getName().".".basename($event->getFeature()->getFile()).".$scenarioLine.".$event->getStep()->getLine().".png";
-            $screenshot = str_replace('.feature', '', $screenshot);
+        }    
 
-            if (file_exists(getcwd().DIRECTORY_SEPARATOR.".tmp_behatFormatter".DIRECTORY_SEPARATOR.$screenshot)){
-                $screenshot = 'assets'.DIRECTORY_SEPARATOR.'screenshots'.DIRECTORY_SEPARATOR.$screenshot;
-                $step->setScreenshot($screenshot);
-            }
+
+        $stepName = strtolower(preg_replace('/[^a-z]/i','',$event->getStep()->getText()));        
+        $relativeScreenshotPath = 'screenshots/' . $this->getCurrentFeature()->getScreenshotFolder() . '/' . strtolower($this->getCurrentScenario()->getScreenshotName()) . '/' . $stepName . '.png';        
+        $fullScreenshotPath = $this->getOutputPrinter()->getOutputPath() . '/' . $relativeScreenshotPath;
+        
+        if (file_exists($fullScreenshotPath)) {
+            $step->setScreenshot($relativeScreenshotPath);
         }
+
         $this->currentScenario->addStep($step);
 
         $print = $this->renderer->renderAfterStep($this);
